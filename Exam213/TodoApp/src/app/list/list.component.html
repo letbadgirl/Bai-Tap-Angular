@@ -1,0 +1,7 @@
+<ul>
+  <li *ngFor="let item of arrTodo;let i=index">
+    <div>
+      <app-item [itemTodo]="item" (changeStatus)="changeStatus(i)" (deleteTodo)="deleteTD(i)"></app-item>
+    </div>
+  </li>
+</ul>

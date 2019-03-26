@@ -1,0 +1,3 @@
+<h1>Todo App</h1>
+<app-input (todoname)="addTodoParent($event)"></app-input>
+<app-list [arrTodo] = "todos" (changeTodo)="changeStatus($event)" (deleteTodo) ="deleteTodo($event)"></app-list>

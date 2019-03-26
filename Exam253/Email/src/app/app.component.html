@@ -1,0 +1,45 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">{{title}}</h3>
+        </div>
+        <div class="panel-body">
+
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <th (click)="onSort('id')">#</th>
+                <th (click)="onSort('firstName')">First Name</th>
+                <th (click)="onSort('lastName')">Last Name</th>
+                <th (click)="onSort('email')">Email</th>
+                <th (click)="onSort('gender')">Gender</th>
+                <th (click)="onSort('birthday')">Birthday</th>
+                <th (click)="onSort('salary')">Salary</th>
+                <th (click)="onSort('phone')">Phone</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of users | sortPipe :sortBy :sortValue; let i = index ">
+                <td>{{i+1}}</td>
+                <td>{{item.firstName}}</td>
+                <td>{{item.lastName}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.gender}}</td>
+                <td>{{item.birthday | date: "dd/MM/yyyy"}}</td>
+                <td>{{item.salary | currency : 'USD' : true : '1.0-3' }}</td>
+                <td>{{item.phone | phone}}</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,28 @@
+<h1>{{title}}</h1>
+<div>
+  <div>
+    <input type="text" class="form-control" #newTodo>
+  </div>
+  <button type="button" class="btn btn-danger" (click)="addTodo(newTodo.value); newTodo.value=''">Add</button>
+</div>
+
+<div>
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>Label</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let todo of todos; let i = index">
+        <td>{{todo.label}}</td>
+        <td   (click)="onToggle(i)">{{todo.status ? '&#10003;' : '&#10005;'}}</td>
+        <td>
+          <button (click)="deleteTodo(todo)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
