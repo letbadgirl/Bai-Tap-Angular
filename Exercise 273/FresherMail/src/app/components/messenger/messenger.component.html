@@ -4,47 +4,34 @@
     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" [ngClass]="{'border-folder': true}">
       <ul class="nav navbar-nav">
         <li routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
-          <a [routerLink]="['/inbox']">inbox</a>
+          <a [routerLink]="['/messenger/inbox']">inbox</a>
         </li>
         <li routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
-          <a [routerLink]="['/finance']">finance</a>
+          <a [routerLink]="['/messenger/finance']">finance</a>
         </li>
         <li routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
-          <a [routerLink]="['/preference']">travel</a>
+          <a [routerLink]="['/messenger/travel']">travel</a>
         </li>
         <li routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
-          <a [routerLink]="['/preference']">personal</a>
+          <a [routerLink]="['/messenger/personal']">personal</a>
         </li>
         <li routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
-          <a [routerLink]="['/preference']">spam</a>
+          <a [routerLink]="['/messenger/spam']">spam</a>
         </li>
         <li routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
-          <a [routerLink]="['/preference']">drafts</a>
+          <a [routerLink]="['/messenger/drafts']">drafts</a>
         </li>
         <li routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
-          <a [routerLink]="['/preference']">sent</a>
+          <a [routerLink]="['/messenger/sent']">sent</a>
         </li>
       </ul>
     </div>
     <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+
+      <router-outlet></router-outlet>
       
-      <table class="table table-bordered table-hover">
-        <thead>
-          <tr>
-            <th>Sender</th>
-            <th>Subject</th>
-            <th>Date</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let item of inbox; let i = index" (click)="onClick(item)">
-            <td>{{item.senderName.last}}</td>
-            <td>{{item.subject}}</td>
-            <td>{{item.date | date : 'dd/MM/yyyy'}}</td>
-          </tr>
-        </tbody>
-      </table>
-      
+
+
     </div>
   </div>
 

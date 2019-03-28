@@ -1,3 +1,17 @@
-<p>
-  sent works!
-</p>
+
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>Sender</th>
+      <th>Subject</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of sent; let i = index" (click)="onClick(item)">
+      <td>{{item.senderName.last}}</td>
+      <td>{{item.subject}}</td>
+      <td>{{item.date | date : 'dd/MM/yyyy'}}</td>
+    </tr>
+  </tbody>
+</table>
