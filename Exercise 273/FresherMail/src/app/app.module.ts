@@ -10,7 +10,7 @@ import { PreferenceComponent } from './components/preference/preference.componen
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { appRoutes } from './app.routes';
 import { HeaderComponent } from './components/header/header.component';
-import { MailDetailComponent } from './components/mail-detail/mail-detail.component';
+import { MailDetailComponent } from './components/list/mail-detail/mail-detail.component';
 import { InboxComponent } from './components/list/inbox/inbox.component';
 //service
 import { MailService } from './services/mail.service';

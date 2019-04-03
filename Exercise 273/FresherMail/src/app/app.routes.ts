@@ -10,6 +10,7 @@ import { PersonalComponent } from './components/list/personal/personal.component
 import { SpamComponent } from './components/list/spam/spam.component';
 import { SentComponent } from './components/list/sent/sent.component';
 import { DraftsComponent } from './components/list/drafts/drafts.component';
+import { MailDetailComponent } from './components/list/mail-detail/mail-detail.component';
 export const appRoutes: Routes = [
     {
         path: '',
@@ -66,5 +67,9 @@ export const appRoutes: Routes = [
     {
         path: '**',
         component: NotFoundComponent
-    }
+    },
+    // {
+    //     path: '/messenger/inbox/mail-detail',
+    //     component: MailDetailComponent
+    // }
 ]; 
